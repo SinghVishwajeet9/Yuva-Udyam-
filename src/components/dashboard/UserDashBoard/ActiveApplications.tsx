@@ -11,7 +11,7 @@ const SAMPLE_APPS = [
   { id: "app_4", status: "Withdrawn", job: { role: "Pharmacist Grade A", organization: "AIIMS Delhi" }, interview: null },
 ];
 
-const statusConfig: Record<string, { icon: React.ElementType; color: string; bg: string; border: string }> = {
+const statusConfig: Record<string, { icon: React.ComponentType<{ className?: string }>; color: string; bg: string; border: string }> = {
   Selected:    { icon: CheckCircle2, color: "text-emerald-400", bg: "bg-emerald-500/8",  border: "border-emerald-500/15" },
   "In Progress": { icon: Clock,       color: "text-cyan-400",    bg: "bg-cyan-500/8",     border: "border-cyan-500/15" },
   Withdrawn:   { icon: AlertCircle,  color: "text-rose-400",    bg: "bg-rose-500/8",     border: "border-rose-500/15" },
