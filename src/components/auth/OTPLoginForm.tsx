@@ -27,7 +27,7 @@ export default function OTPLoginForm() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email }),
-      });
+      }) || { ok: false, json: async () => ({ message: "Network error" }) };
 
       const data = await res.json();
 
